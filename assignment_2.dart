@@ -1,27 +1,28 @@
 void main() {
   String studentName = "Amin";
-  int testScore = 74;
+  int testScore = -1;
 
   String studentResult = studentGrade(studentName, testScore);
-  print(studentResult);
+
+  if (studentResult != "Invalid Grade") {
+    print("$studentName's grade : $studentResult");
+  } else {
+    print("Invalid Grade");
+  }
 }
 
 String studentGrade(String studentName, int testScore) {
-  String grade = "";
   if (testScore >= 90) {
-    grade = 'A';
-    return "$studentName's grade : $grade";
+    return "A";
   } else if (testScore >= 80 && testScore <= 89) {
-    grade = 'B';
-    return "$studentName's grade : $grade";
+    return "B";
   } else if (testScore >= 70 && testScore <= 79) {
-    grade = 'C';
-    return "$studentName's grade : $grade";
+    return "C";
   } else if (testScore >= 60 && testScore <= 69) {
-    grade = 'D';
-    return "$studentName's grade : $grade";
+    return "C";
+  } else if (testScore >= 0 && testScore <= 59) {
+    return "F";
   } else {
-    grade = 'F';
-    return "$studentName's grade : $grade";
+    return "Invalid Grade";
   }
 }
