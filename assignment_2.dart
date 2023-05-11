@@ -19,7 +19,7 @@ String studentGrade(String studentName, int testScore) {
   } else if (testScore >= 70 && testScore <= 79) {
     return "C";
   } else if (testScore >= 60 && testScore <= 69) {
-    return "C";
+    return "D";
   } else if (testScore >= 0 && testScore <= 59) {
     return "F";
   } else {
